@@ -38,4 +38,3 @@ int EdgeNode_free(edgeNode* headEdgeNode)
 	free(next);
 	return 0;
 }
-

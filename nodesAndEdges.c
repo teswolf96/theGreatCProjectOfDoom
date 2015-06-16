@@ -30,3 +30,6 @@ int Add_EdgeNode(Edge newEdge, edgeNode *headNode)
 	}
 	curr->nextEdgeNode = Edgenode_create(newEdge);
 }
+
+//TODO: finish this!!!
+
