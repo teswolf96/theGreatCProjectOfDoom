@@ -3,7 +3,7 @@
 
 struct Node {
 		char* name;
-		struct EdgeNode *headEdgeNode;
+		struct edgeNode *headEdgeNode;
 };
 
 typedef struct Node Node;
