@@ -7,16 +7,16 @@ void Dijkstra(Node *head, Node *start, int path)
 {
 	Node *curr = start;
 	edgeNode *currEdge = curr->headEdgeNode;
-	Node *shorter = currEdge;
+	edgeNode *shorter = currEdge;
 	while(currEdge != NULL)
 	{
-		if(shorter->weight > currEdge->weight)
+		if(shorter->theEdge->weight > currEdge->theEdge->weight)
 		{
 			shorter = currEdge;
 		}
 		currEdge = currEdge->nextEdgeNode;
 	}
-	path = currEdge->weight;
-	printf("%s->%s  :  %d\n", head->name, currEdge->edge2->name, path);
+	path = currEdge->theEdge->weight;
+	printf("%s->%s  :  %d\n", head->name, currEdge->theEdge->edge2->name, path);
 	Dijkstra(head, currEdge, path);
 }
