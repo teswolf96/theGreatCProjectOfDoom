@@ -18,5 +18,4 @@ typedef struct Edge Edge;
 
 Edge *Create_edge(Node inEnd1, Node inEnd2, int inWeight);
 Node *Create_node(char* name);
-int Add_edge(Edge addThis, Node addTo);
 #endif

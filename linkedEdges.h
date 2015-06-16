@@ -11,5 +11,5 @@ struct edgeNode {
 typedef struct edgeNode edgeNode;
 
 edgeNode *Edgenode_create(Edge edge);
-int EdgeNode_add(Edge edge, edgeNode *headNode);
+int Add_EdgeNode(Edge newEdge, EdgeNode *headNode);
 int EdgeNode_free(edgeNode* headEdgeNode);
