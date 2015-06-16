@@ -3,7 +3,7 @@
 
 struct Node {
 		char* name;
-		struct *headEdgeNode;
+		struct EdgeNode *headEdgeNode;
 };
 
 typedef struct Node Node;
@@ -18,4 +18,5 @@ typedef struct Edge Edge;
 
 Edge *Create_edge(Node inEnd1, Node inEnd2, int inWeight);
 Node *Create_node(char* name);
-Edge Add_edge(Edge addThis);
+int Add_edge(Edge addThis, Node addTo);
+#endif

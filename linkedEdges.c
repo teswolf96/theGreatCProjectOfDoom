@@ -1,18 +1,11 @@
+#include "linkedEdges.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include "nodesAndEdges.h"
 
-struct edgeNode {
-		Edge edgeNode;
-		struct edgeNode *nextEdgeNode;
-};
-
-typedef struct edgeNode edgeNode;
-
-struct edgeNode *Edgenode_create(Edge edge)
+edgeNode *Edgenode_create(Edge edge)
 {
 	edgeNode *edgeNodeData = malloc(sizeof(struct edgeNode));
-	edgeNodeData->edgeNode = edge;
+	edgeNodeData->theEdge = edge;
 	edgeNodeData->nextEdgeNode = NULL;
 
 	return edgeNodeData;
@@ -22,7 +15,7 @@ int EdgeNode_add(Edge edge, edgeNode *headNode)
 {
 	edgeNode *curr = malloc(sizeof(struct edgeNode));
 	edgeNode *prev = headNode;
-	curr->edgeNode = edge;
+	curr->theEdge = edge;
 	curr->nextEdgeNode = NULL;
 	while(prev->nextEdgeNode!=NULL)
 	{
