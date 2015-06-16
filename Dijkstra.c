@@ -18,5 +18,5 @@ void Dijkstra(Node *head, Node *start, int path)
 	}
 	path = currEdge->theEdge->weight;
 	printf("%s->%s  :  %d\n", head->name, currEdge->theEdge->edge2->name, path);
-	Dijkstra(head, currEdge, path);
+	Dijkstra(head, currEdge->theEdge->edge2, path);
 }
