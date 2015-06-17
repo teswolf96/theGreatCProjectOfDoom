@@ -4,7 +4,7 @@
 #include "nodesAndEdges.h"
 
 struct edgeNode {
-		Edge theEdge;
+		Edge *theEdge;
 		struct edgeNode *nextEdgeNode;
 };
 

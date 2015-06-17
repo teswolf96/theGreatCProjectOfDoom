@@ -1,0 +1,42 @@
+#include "linkedEdges.h"
+
+#include <linkedListNodes.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+edgeNode *Nodenode_create(Node node)
+{
+	nodeNode *nodeNodeData = malloc(sizeof(struct nodeNode));
+	nodeNodeData->theNode = node;
+	nodeNodeData->nextNodeNode = NULL;
+
+	return nodeNodeData;
+}
+
+int NodeNode_add(Node node, nodeNode *nodeNode)
+{
+	nodeNode *curr = malloc(sizeof(struct nodeNode));
+	nodeNode *prev = headNode;
+	curr->theNode = node;
+	curr->nextNodeNode = NULL;
+	while(prev->nextNodeNode!=NULL)
+	{
+		prev = prev->nextNodeNode;
+	}
+	prev->nextNodeNode = curr;
+
+	return 0;
+}
+
+int NodeNode_free(nodeNode* headNodeNode)
+{
+	nodeNode *next = headNodeNode;
+	while(next->nextNodeNode!=NULL)
+	{
+		nodeNode *prev = next;
+		next = prev->nextNodeNode;
+		free(prev);
+	}
+	free(next);
+	return 0;
+}

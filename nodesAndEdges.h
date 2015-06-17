@@ -9,8 +9,8 @@ struct Node {
 typedef struct Node Node;
 
 struct Edge {
-		Node end1;
-		Node end2;
+		Node *end1;
+		Node *end2;
 		int weight;
 };
 

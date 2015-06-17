@@ -1,0 +1,6 @@
+struct nodeNode {
+		Node *theNode;
+		struct nodeNode *nextnodeNode;
+};
+
+typedef struct nodeNode nodeNode;

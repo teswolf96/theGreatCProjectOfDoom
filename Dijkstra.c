@@ -1,4 +1,4 @@
-#include "linkedEdges.h"
+#include "linkedListNodes.h"
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdarg.h>
@@ -17,6 +17,6 @@ void Dijkstra(Node *head, Node *start, int path)
 		currEdge = currEdge->nextEdgeNode;
 	}
 	path = currEdge->theEdge->weight;
-	printf("%s->%s  :  %d\n", head->name, currEdge->theEdge->edge2->name, path);
-	Dijkstra(head, currEdge->theEdge->edge2, path);
+	printf("%s->%s  :  %d\n", head->name, currEdge->theEdge->end2->name, path);
+	Dijkstra(head, currEdge->theEdge->end2, path);
 }
